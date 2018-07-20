@@ -1,7 +1,7 @@
 from collections import Counter
 from time import time
 
-cdef int HAND_SIZE = 5
+HAND_SIZE = 5
 
 ranks = {
     '2': 2,
@@ -21,7 +21,7 @@ ranks = {
 
 
 class FiveCardHand:
-    """Represents a full poker hand in a 5 card game """
+    """Represents a full poker hand in a 5 card game"""
 
     def __init__(self, cards):
         self.cards = sorted(cards, key=lambda x: ranks[x[0]], reverse=True)
@@ -97,7 +97,7 @@ class FiveCardHand:
         return [item for items, c in Counter(self.ranks).most_common() for item in [items] * c]
 
 
-cdef compare_hands(hand_1, hand_2):
+def compare_hands(hand_1, hand_2):
     """
     Given 2 lists, get scores for both and
     :return: True, if hand_1 is better than hand_2, None if tie
@@ -137,4 +137,3 @@ def calculate_victories(filename):
                 first_hand_victories += 1
 
     print(first_hand_victories)
-

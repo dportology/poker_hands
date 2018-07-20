@@ -136,4 +136,4 @@ def calculate_victories(filename):
             if compare_hands(FiveCardHand(hands[:5]), FiveCardHand(hands[5:])):
                 first_hand_victories += 1
 
-    print(first_hand_victories)
+    return first_hand_victories

@@ -8,5 +8,5 @@ import time
 
 # Call here function in poker_comparison, passing in our file name
 start = time.time()
-calculate_victories('poker.txt')
+print(f'Player 1 won {calculate_victories("poker.txt")} times')
 print(f'Took {time.time() - start}')
